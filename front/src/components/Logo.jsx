@@ -1,10 +1,8 @@
 export default function Logo({ className = '' }) {
   return (
     <a href="#inicio" className={`flex items-center gap-2.5 ${className}`}>
-      <span className="relative grid h-11 w-11 place-items-center rounded-full bg-brand-900 ring-2 ring-lime-brand shadow-lg shadow-lime-brand/30">
-        <svg viewBox="0 0 24 24" className="h-6 w-6 text-lime-brand" fill="currentColor">
-          <path d="M12 2l2.9 6.5L22 9.2l-5.3 4.7 1.5 7.1L12 17.4 5.8 21l1.5-7.1L2 9.2l7.1-.7z" />
-        </svg>
+      <span className="grid h-13 w-13 shrink-0 place-items-center rounded-full bg-white p-0.5 shadow-lg shadow-lime-brand/30 ring-2 ring-lime-brand">
+        <img src="/images/logo.png" alt="Super Envíos Triviño S.A.S." width="500" height="500" className="h-full w-full object-contain" />
       </span>
       <span className="leading-none">
         <span className="block text-lg font-black italic tracking-tight text-white">
