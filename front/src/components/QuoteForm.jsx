@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { SERVICES, MUNICIPIOS, WHATSAPP, waLink } from '../data/config'
+import { SERVICES, CIUDADES, WHATSAPP, waLink } from '../data/config'
 import { serviceIcons, WhatsAppIcon } from './Icons'
 
 const OTRO = 'Otro destino nacional'
@@ -12,7 +12,7 @@ export default function QuoteForm() {
     servicio: SERVICES[0].id,
     nombre: '',
     origen: 'Neiva',
-    destino: 'Pitalito',
+    destino: 'Bogotá D.C.',
     destinoOtro: '',
     detalle: '',
   })
@@ -93,13 +93,13 @@ export default function QuoteForm() {
             <div>
               <label className="mb-1.5 block text-sm font-bold text-white" htmlFor="origen">Origen</label>
               <select id="origen" className={inputCls} value={form.origen} onChange={set('origen')}>
-                {MUNICIPIOS.map((m) => <option key={m} className="text-gray-900">{m}</option>)}
+                {CIUDADES.map((m) => <option key={m} className="text-gray-900">{m}</option>)}
               </select>
             </div>
             <div>
               <label className="mb-1.5 block text-sm font-bold text-white" htmlFor="destino">Destino</label>
               <select id="destino" className={inputCls} value={form.destino} onChange={set('destino')}>
-                {MUNICIPIOS.map((m) => <option key={m} className="text-gray-900">{m}</option>)}
+                {CIUDADES.map((m) => <option key={m} className="text-gray-900">{m}</option>)}
                 <option className="text-gray-900">{OTRO}</option>
               </select>
             </div>

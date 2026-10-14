@@ -20,7 +20,7 @@ export default function Hero() {
           </h1>
           <p className="mt-3 text-xl font-bold text-white/90 sm:text-2xl">Llevamos tus paquetes a todo Colombia</p>
           <p className="mt-5 max-w-xl text-base text-white/70">
-            Encomiendas, carga, compras y mudanzas entre los municipios del Huila y hacia todo el país.
+            Encomiendas, carga, compras y mudanzas desde el Huila hacia todas las capitales y ciudades del país.
             Cotiza en segundos por WhatsApp.
           </p>
 
