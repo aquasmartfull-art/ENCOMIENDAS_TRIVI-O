@@ -1,13 +1,8 @@
-// Números de WhatsApp (formato internacional sin "+")
-export const WHATSAPP_NUMBERS = [
-  { label: 'Línea 1', display: '311 500 0678', number: '573115000678' },
-  { label: 'Línea 2', display: '317 782 3611', number: '573177823611' },
-]
+// Número de WhatsApp (formato internacional sin "+")
+export const WHATSAPP = { display: '320 499 0858', number: '573204990858' }
 
-export const DEFAULT_NUMBER = WHATSAPP_NUMBERS[0].number
-
-export const waLink = (message, number = DEFAULT_NUMBER) =>
-  `https://wa.me/${number}?text=${encodeURIComponent(message)}`
+export const waLink = (message) =>
+  `https://wa.me/${WHATSAPP.number}?text=${encodeURIComponent(message)}`
 
 export const SERVICES = [
   {

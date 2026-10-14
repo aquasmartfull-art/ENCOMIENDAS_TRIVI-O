@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { SERVICES, MUNICIPIOS, WHATSAPP_NUMBERS, waLink } from '../data/config'
+import { SERVICES, MUNICIPIOS, WHATSAPP, waLink } from '../data/config'
 import { serviceIcons, WhatsAppIcon } from './Icons'
 
 const OTRO = 'Otro destino nacional'
@@ -15,7 +15,6 @@ export default function QuoteForm() {
     destino: 'Pitalito',
     destinoOtro: '',
     detalle: '',
-    linea: WHATSAPP_NUMBERS[0].number,
   })
 
   const set = (k) => (e) => setForm({ ...form, [k]: e.target.value })
@@ -39,7 +38,7 @@ export default function QuoteForm() {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    window.open(waLink(message, form.linea), '_blank', 'noopener,noreferrer')
+    window.open(waLink(message), '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -125,29 +124,13 @@ export default function QuoteForm() {
             />
           </div>
 
-          <div>
-            <p className="mb-1.5 text-sm font-bold text-white">Enviar a</p>
-            <div className="flex flex-wrap gap-3">
-              {WHATSAPP_NUMBERS.map((n) => (
-                <label
-                  key={n.number}
-                  className={`cursor-pointer rounded-full px-4 py-2 text-sm font-bold ring-1 transition ${
-                    form.linea === n.number ? 'bg-white text-brand-900 ring-white' : 'text-white ring-white/25 hover:bg-white/10'
-                  }`}
-                >
-                  <input type="radio" name="linea" value={n.number} checked={form.linea === n.number} onChange={set('linea')} className="sr-only" />
-                  {n.display}
-                </label>
-              ))}
-            </div>
-          </div>
-
           <button
             type="submit"
             className="flex w-full items-center justify-center gap-3 rounded-full bg-gradient-to-r from-brand-500 to-lime-brand px-6 py-4 text-base font-black uppercase italic tracking-wide text-brand-950 shadow-lg shadow-lime-brand/30 transition hover:-translate-y-0.5"
           >
             <WhatsAppIcon className="h-6 w-6" /> Enviar por WhatsApp
           </button>
+          <p className="text-center text-xs text-white/50">Se abrirá WhatsApp con el {WHATSAPP.display}</p>
         </form>
       </div>
     </section>

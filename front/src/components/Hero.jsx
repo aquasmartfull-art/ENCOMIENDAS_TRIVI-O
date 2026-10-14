@@ -1,5 +1,4 @@
 import WhatsAppButton from './WhatsAppButton'
-import TruckIllustration from './TruckIllustration'
 import { SERVICES } from '../data/config'
 import { serviceIcons } from './Icons'
 
@@ -53,7 +52,14 @@ export default function Hero() {
         <div className="relative">
           <div className="absolute inset-6 rounded-full border-[10px] border-lime-brand/20" />
           <div className="absolute inset-14 rounded-full border-2 border-dashed border-lime-brand/30" />
-          <TruckIllustration className="relative w-full animate-drive drop-shadow-[0_25px_35px_rgba(0,0,0,.5)]" />
+          <div className="absolute inset-x-10 bottom-10 h-10 rounded-[50%] bg-black/50 blur-xl" />
+          <img
+            src="/images/camion-inicio.png"
+            alt="Camión de Super Envíos Triviño S.A.S. - Encomiendas y carga"
+            width="616"
+            height="405"
+            className="relative mx-auto w-full max-w-xl object-contain animate-drive drop-shadow-[0_25px_35px_rgba(0,0,0,.55)]"
+          />
           <div className="relative mx-auto -mt-2 w-fit -skew-x-12 rounded-md bg-gradient-to-r from-brand-600 to-lime-brand px-6 py-2 shadow-lg">
             <p className="skew-x-12 text-sm font-black uppercase italic text-brand-950 sm:text-base">
               Atención rápida, <span className="text-white">segura</span> y confiable
