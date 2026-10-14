@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-950: #04210f;
+  --color-brand-900: #0a3d1c;
+  --color-brand-800: #0f5226;
+  --color-brand-700: #146c30;
+  --color-brand-600: #1a8a3a;
+  --color-brand-500: #22a845;
+  --color-brand-400: #4cc94f;
+  --color-lime-brand: #7ed321;
+  --color-lime-glow: #a6ec3c;
+  --color-whatsapp: #25d366;
+}
+
+html { scroll-behavior: smooth; }
+
+@utility text-gradient {
+  background-image: linear-gradient(90deg, #a6ec3c, #4cc94f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility stripes {
+  background-image: repeating-linear-gradient(115deg, rgba(126,211,33,.12) 0 18px, transparent 18px 46px);
+}
+
+@keyframes drive {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@utility animate-drive { animation: drive 3s ease-in-out infinite; }
+
+@keyframes ping-soft {
+  0% { transform: scale(1); opacity: .6; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+@utility animate-ping-soft { animation: ping-soft 1.8s ease-out infinite; }
